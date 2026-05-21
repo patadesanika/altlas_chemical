@@ -1,11 +1,11 @@
 import { ChemicalProduct, CompanyOffice } from './types';
 
-// Asset paths
-const imgDefault = "/assets/images/atlas_chemical_banner_1779280184633.png";
-const imgAgro = "/assets/images/agro_chemicals_cover_1779368342951.png";
-const imgVitamin = "/assets/images/nutrients_vitamins_cover_1779368362980.png";
-const imgSecurity = "/assets/images/security_devices_cover_1779368378590.png";
-const imgProduce = "/assets/images/fresh_produce_cover_1779368398115.png";
+// Asset imports
+import imgDefault from './assets/images/atlas_chemical_banner_1779280184633.png';
+import imgAgro from './assets/images/agro_chemicals_cover_1779368342951.png';
+import imgVitamin from './assets/images/nutrients_vitamins_cover_1779368362980.png';
+import imgSecurity from './assets/images/security_devices_cover_1779368378590.png';
+import imgProduce from './assets/images/fresh_produce_cover_1779368398115.png';
 
 export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
   {
