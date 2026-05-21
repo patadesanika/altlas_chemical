@@ -77,14 +77,10 @@ export default function ProductSection({ initialCategory = 'All', onNavigate }: 
     }, 1200);
   };
 
-  const handleBuyAction = (prod: ChemicalProduct) => {
-    if (onNavigate) {
-      onNavigate(prod.actionTarget);
-    } else {
-      const targetElement = document.getElementById(prod.actionTarget);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
+  const handleBuyAction = (_prod: ChemicalProduct) => {
+    const targetElement = document.getElementById('regional-hub');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
