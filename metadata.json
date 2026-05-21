@@ -1,0 +1,6 @@
+{
+  "name": "Atlas Chemical",
+  "description": "Premium industrial chemical catalog, research, and corporate trade portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
