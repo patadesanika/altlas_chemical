@@ -1,10 +1,10 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Search, Filter, BookOpen, Send, Download, CheckCircle2, X, FlaskConical, Clipboard, FileText, ChevronRight 
+  Search, FlaskConical
 } from 'lucide-react';
 import { CHEMICAL_PRODUCTS } from '../data';
-import { ChemicalProduct, InquiryForm, ActiveSection } from '../types';
+import { ChemicalProduct, ActiveSection } from '../types';
 
 interface ProductSectionProps {
   initialCategory?: 'Solvents' | 'Catalysts' | 'Polymers' | 'Reagents' | 'Agro Chemicals' | 'Vitamins' | 'Security Systems' | 'Organic Produce' | 'All';
@@ -20,18 +20,7 @@ export default function ProductSection({ initialCategory = 'All', onNavigate }: 
 
   const [searchTerm, setSearchTerm] = useState('');
   
-  // Quote dialog states
-  const [selectedProductForInquiry, setSelectedProductForInquiry] = useState<ChemicalProduct | null>(null);
-  const [quoteForm, setQuoteForm] = useState<InquiryForm>({
-    name: '',
-    email: '',
-    company: '',
-    subject: '',
-    message: '',
-    interestedProduct: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+
 
   // Tabs
   const categories: ('All' | 'Solvents' | 'Catalysts' | 'Polymers' | 'Reagents' | 'Agro Chemicals' | 'Vitamins' | 'Security Systems' | 'Organic Produce')[] = [
@@ -49,33 +38,7 @@ export default function ProductSection({ initialCategory = 'All', onNavigate }: 
     return matchesCategory && matchesSearch;
   });
 
-  const handleInquiryOpen = (prod: ChemicalProduct) => {
-    setSelectedProductForInquiry(prod);
-    setQuoteForm({
-      name: '',
-      email: '',
-      company: '',
-      subject: `Trade Inquiry: ${prod.name}`,
-      message: `We would like to request technical specifications, Safety Data Sheets (SDS), and unit pricing details for bulk orders of ${prod.name} (${prod.formula}). Please provide bulk pricing options for packaging variant: ${prod.packaging[0]}.`,
-      interestedProduct: prod.name
-    });
-    setSubmitSuccess(false);
-  };
 
-  const handleInquirySubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate API request proxy
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      // Reset form on success after brief delaying
-      setTimeout(() => {
-        setSelectedProductForInquiry(null);
-        setSubmitSuccess(false);
-      }, 3000);
-    }, 1200);
-  };
 
   const handleBuyAction = (_prod: ChemicalProduct) => {
     const targetElement = document.getElementById('regional-hub');
@@ -243,13 +206,7 @@ export default function ProductSection({ initialCategory = 'All', onNavigate }: 
                 </div>
 
                 {/* Actions Bottom shelf */}
-                <div className="grid grid-cols-2 gap-2 mt-6">
-                  <button 
-                    onClick={() => handleInquiryOpen(prod)}
-                    className="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 font-semibold text-xs transition-all cursor-pointer text-center"
-                  >
-                    Inquire Quote
-                  </button>
+                <div className="mt-6">
                   <button 
                     onClick={() => handleBuyAction(prod)}
                     className="w-full py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer text-center flex items-center justify-center gap-1.5"
@@ -282,118 +239,7 @@ export default function ProductSection({ initialCategory = 'All', onNavigate }: 
 
       </div>
 
-      {/* Inline SDS Inquiry Dialog Overlay */}
-      <AnimatePresence>
-        {selectedProductForInquiry && (
-          <div className="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <motion.div 
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-slate-900 border border-slate-850 rounded-3xl p-6 md:p-8 w-full max-w-lg shadow-2xl relative"
-            >
-              <button 
-                onClick={() => setSelectedProductForInquiry(null)}
-                className="absolute top-4 right-4 p-1 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white"
-              >
-                <X className="w-5 h-5" />
-              </button>
 
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-teal-500/10 border border-teal-500/30 rounded-lg">
-                  <FileText className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Technical Inquiry Form</h3>
-                  <p className="text-xs text-slate-400 font-mono">{selectedProductForInquiry.name}</p>
-                </div>
-              </div>
-
-              {submitSuccess ? (
-                <div className="text-center py-10 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-teal-500/10 border border-teal-500/30 flex items-center justify-center mx-auto">
-                    <CheckCircle2 className="w-8 h-8 text-teal-400" />
-                  </div>
-                  <h4 className="text-lg font-bold text-white">Request Dispatched Successfully!</h4>
-                  <p className="text-xs text-slate-400 max-w-sm mx-auto leading-relaxed">
-                    Our Rotterdam Trade operations department has registered this request. An analytical Chemist and logistic account manager will contact you at your email within 4 hours.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleInquirySubmit} className="space-y-4 text-left">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-[10px] font-mono uppercase text-slate-400 mb-1.5 font-bold">Your Name</label>
-                      <input 
-                        required
-                        type="text" 
-                        value={quoteForm.name}
-                        onChange={(e) => setQuoteForm({...quoteForm, name: e.target.value})}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-teal-500" 
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-mono uppercase text-slate-400 mb-1.5 font-bold">Corporate Email</label>
-                      <input 
-                        required
-                        type="email" 
-                        value={quoteForm.email}
-                        onChange={(e) => setQuoteForm({...quoteForm, email: e.target.value})}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-teal-500" 
-                        placeholder="purchasing@company.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] font-mono uppercase text-slate-400 mb-1.5 font-bold">Company / Entity</label>
-                    <input 
-                      required
-                      type="text" 
-                      value={quoteForm.company}
-                      onChange={(e) => setQuoteForm({...quoteForm, company: e.target.value})}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-teal-500" 
-                      placeholder="BioSynthesis Labs Ltd."
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] font-mono uppercase text-slate-400 mb-1.5 font-bold">Subject Summary</label>
-                    <input 
-                      required
-                      type="text" 
-                      value={quoteForm.subject}
-                      onChange={(e) => setQuoteForm({...quoteForm, subject: e.target.value})}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-teal-500" 
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] font-mono uppercase text-slate-400 mb-1.5 font-bold">Inquiry Message</label>
-                    <textarea 
-                      required
-                      rows={4}
-                      value={quoteForm.message}
-                      onChange={(e) => setQuoteForm({...quoteForm, message: e.target.value})}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-teal-500 resize-none leading-relaxed" 
-                    />
-                  </div>
-
-                  <button 
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full mt-2 py-3 bg-teal-500 hover:bg-teal-400 disabled:bg-slate-800 text-slate-950 disabled:text-slate-500 font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <span>{isSubmitting ? 'Transmitting Registry Data...' : 'Submit Official Inquire'}</span>
-                    <Send className="w-3.5 h-3.5" />
-                  </button>
-                </form>
-              )}
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
     </section>
   );
