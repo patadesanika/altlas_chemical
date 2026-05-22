@@ -7,7 +7,7 @@ import { CHEMICAL_PRODUCTS } from '../data';
 import { ChemicalProduct } from '../types';
 
 interface HomeSectionProps {
-  onLearnMore: (category: 'Solvents' | 'Catalysts' | 'Polymers' | 'Reagents') => void;
+  onLearnMore: (category: ChemicalProduct['category'] | 'All') => void;
 }
 
 const INDUSTRIES = [

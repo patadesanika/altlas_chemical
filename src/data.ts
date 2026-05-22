@@ -1,11 +1,49 @@
 import { ChemicalProduct, CompanyOffice } from './types';
 
-// Asset imports
+// Category cover imports
 import imgDefault from './assets/images/atlas_chemical_banner_1779280184633.png';
 import imgAgro from './assets/images/agro_chemicals_cover_1779368342951.png';
 import imgVitamin from './assets/images/nutrients_vitamins_cover_1779368362980.png';
 import imgSecurity from './assets/images/security_devices_cover_1779368378590.png';
 import imgProduce from './assets/images/fresh_produce_cover_1779368398115.png';
+
+// Individual product image imports
+import imgTHF from './assets/images/High-Purity Tetrahydrofuran (THF).jpg';
+import imgTiO2 from './assets/images/Titanium Dioxide Rutile (Nano).jpg';
+import imgDMSO from './assets/images/Dimethyl Sulfoxide (DMSO) Pharma-Grade.jpg';
+import imgPEG from './assets/images/Polyethylene Glycol (PEG-400).jpg';
+import imgCobalt from './assets/images/Cobalt Octoate 12 percent.jpg';
+import imgAcetonitrile from './assets/images/Ultra-Pure Acetonitrile (HPLC Grade).jpg';
+import imgEVA from './assets/images/Ethylene Vinyl Acetate Copolymer (EVA-18).jpg';
+import imgAlCl3 from './assets/images/Anhydrous Aluminum Chloride (Catalyst Grade).jpg';
+import imgChlorpyrifos from './assets/images/Chlorpyrifos Technical.jpg';
+import imgEmamectin from './assets/images/Emamectin Benzoate.jpg';
+import imgProfenofos from './assets/images/Profenofos Technical.jpg';
+import imgThiamethoxam from './assets/images/Thiamethoxam 30 percent FS.jpg';
+import imgLambda from './assets/images/Lambda-Cyhalothrin Tech.jpg';
+import imgChlorantraniliprole from './assets/images/Chlorantraniliprole Tech.jpg';
+import imgGA3 from './assets/images/Gibberellic Acid (GA3).jpg';
+import imgAbamectin from './assets/images/Abamectin Tech.jpg';
+import imgPotassiumHumate from './assets/images/Potassium Humate Powder.jpg';
+import imgHumicAcid from './assets/images/Humic Acid Flakes premium.jpg';
+import imgVitA from './assets/images/Vitamin A Palmitate 1.7M IU.jpg';
+import imgVitD3 from './assets/images/Vitamin D3 (Cholecalciferol).jpg';
+import imgVitD2 from './assets/images/Vitamin D2 (Ergocalciferol).jpg';
+import imgVitE from './assets/images/Vitamin E (DL-Alpha Tocopheryl Acetate).jpg';
+import imgVitB12 from './assets/images/Vitamin B12 (Cyanocobalamin).jpg';
+import imgVitC from './assets/images/Ascorbic Acid (Vitamin C).jpg';
+import imgVitK from './assets/images/Vitamin K (Phytomenadione).jpg';
+import imgEMLock from './assets/images/Industrial EM Lock 280kg.jpg';
+import imgShutterSensor from './assets/images/Heavy Duty Shutter Sensor.jpg';
+import imgLZBracket from './assets/images/Anodized LZ Bracket Set.jpg';
+import imgDoorSensor from './assets/images/Precision Door Contact Sensor.jpg';
+import imgExitSwitch from './assets/images/Stainless Steel Exit Switch.jpg';
+import imgSolenoid from './assets/images/Solenoid Strike Lock system.jpg';
+import imgMangoes from './assets/images/Subtropical Bio-secure Mangoes.jpg';
+import imgAvocadoes from './assets/images/Phyto-isolated Fresh Avocadoes.jpg';
+import imgBellPeppers from './assets/images/Rich Nutrient Bell Peppers.jpg';
+
+export { imgDefault, imgAgro, imgVitamin, imgSecurity, imgProduce };
 
 export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
   {
@@ -19,7 +57,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 3 Flammable Liquid',
     applications: ['Pharmaceutical APIs', 'Grignard Reagents', 'Polymer Coatings', 'Adhesives'],
     packaging: ['200L Steel Drums', '1000L IBC Tanks', 'Bulk Iso-Tanks'],
-    imageUrl: imgDefault,
+    imageUrl: imgTHF,
     actionTarget: 'contact'
   },
   {
@@ -33,7 +71,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Non-Hazardous (Powder)',
     applications: ['UV-Shielding Coatings', 'Photo-voltaics', 'Polymers & Plastics', 'Environmental Catalyst'],
     packaging: ['25kg Multi-layer Bags', '500kg Bulk Bags'],
-    imageUrl: imgDefault,
+    imageUrl: imgTiO2,
     actionTarget: 'contact'
   },
   {
@@ -47,7 +85,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Low Toxicity / Irritant',
     applications: ['Active Pharmaceutical Ingredients (APIs)', 'Cell Conservation', 'Agrochemicals', 'Electronics Cleansing'],
     packaging: ['25L HDPE Jerrycans', '220L Polypropylene Drums'],
-    imageUrl: imgDefault,
+    imageUrl: imgDMSO,
     actionTarget: 'contact'
   },
   {
@@ -61,7 +99,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Non-Hazardous',
     applications: ['Cosmetics', 'Oral Formulations', 'Ointments & Creams', 'Metal Working Lubricants'],
     packaging: ['200kg Plastic Drums', '1000kg IBC Containers'],
-    imageUrl: imgDefault,
+    imageUrl: imgPEG,
     actionTarget: 'contact'
   },
   {
@@ -75,7 +113,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 9 Environmentally Hazardous',
     applications: ['Fibre Reinforced Plastics (FRP)', 'Alkyd Paint Driers', 'Polymerization Initiator'],
     packaging: ['50kg Iron Pails', '180kg Steel Drums'],
-    imageUrl: imgDefault,
+    imageUrl: imgCobalt,
     actionTarget: 'contact'
   },
   {
@@ -89,7 +127,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 3 Flammable & Toxic',
     applications: ['HPLC & LC-MS Analysis', 'Peptide Synthesis', 'DNA / RNA Synthesis', 'Quality Control Laboratories'],
     packaging: ['4 x 4L Glass Carton', '20L Stainless Steel Drums'],
-    imageUrl: imgDefault,
+    imageUrl: imgAcetonitrile,
     actionTarget: 'contact'
   },
   {
@@ -103,7 +141,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Non-Hazardous Pellets',
     applications: ['Hot-Melt Adhesives', 'Photovoltaic Encapsulating', 'Wire & Cable Jacketing', 'Footwear Midsoles'],
     packaging: ['25kg Valve Bags', '1000kg Octabins'],
-    imageUrl: imgDefault,
+    imageUrl: imgEVA,
     actionTarget: 'contact'
   },
   {
@@ -117,7 +155,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 8 Corrosive Solid',
     applications: ['Friedel-Crafts Catalysis', 'Scent & Fragrance Synthesis', 'Dye Intermediates', 'Refinery Alkylations'],
     packaging: ['50kg Moisture-Proof Drums', 'Bulk Tanker Loads'],
-    imageUrl: imgDefault,
+    imageUrl: imgAlCl3,
     actionTarget: 'contact'
   },
 
@@ -133,7 +171,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 6.1 Toxic Substance',
     applications: ['Broad-scale Crop Care', 'Soil Infestation Management', 'Termite Barriers'],
     packaging: ['250kg UN Steel Drums', 'Bulk ISO Tanks'],
-    imageUrl: imgAgro,
+    imageUrl: imgChlorpyrifos,
     actionTarget: 'about'
   },
   {
@@ -147,7 +185,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 6.1 Mild Poison',
     applications: ['Horticulture Defense', 'Lepidopteran Pest Control', 'Foliar Crop Protection'],
     packaging: ['25kg Fiber Drums', '1kg Aluminum Pouches'],
-    imageUrl: imgAgro,
+    imageUrl: imgEmamectin,
     actionTarget: 'about'
   },
   {
@@ -161,7 +199,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 6.1 Moderately Toxic',
     applications: ['Cotton Crop Shielding', 'Sucking Pest Eradication', 'Systemic Foliage Care'],
     packaging: ['200L Polyurethane Drums', '25L HDPE Cans'],
-    imageUrl: imgAgro,
+    imageUrl: imgProfenofos,
     actionTarget: 'about'
   },
   {
@@ -175,7 +213,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 9 Ecologically Regulated',
     applications: ['Early Seed Coating', 'Root System Conditioning', 'Suction Insect Control'],
     packaging: ['50L HDPE Containers', '5L Dispenser Packs'],
-    imageUrl: imgAgro,
+    imageUrl: imgThiamethoxam,
     actionTarget: 'about'
   },
   {
@@ -189,7 +227,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 6.1 Restricted Substance',
     applications: ['Foliar Pest Eradication', 'Locust Outbreak Management', 'Public Health Vector Control'],
     packaging: ['25kg Cardboard Cases', '200L Drum Packs'],
-    imageUrl: imgAgro,
+    imageUrl: imgLambda,
     actionTarget: 'about'
   },
   {
@@ -203,7 +241,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Low Toxicity Profile',
     applications: ['Vanyards & Orchards Care', 'Caterpillar Control', 'Eco-safe Agriculture Integration'],
     packaging: ['25kg Sealed Tins', '500g Bottles'],
-    imageUrl: imgAgro,
+    imageUrl: imgChlorantraniliprole,
     actionTarget: 'about'
   },
   {
@@ -217,7 +255,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Non-Hazardous',
     applications: ['Grape & Fruit Elongation', 'Seed Germination Interventions', 'Brewing Malt Acceleration'],
     packaging: ['10kg Custom Fiber Bags', '100g Cryo Jars'],
-    imageUrl: imgAgro,
+    imageUrl: imgGA3,
     actionTarget: 'about'
   },
   {
@@ -231,7 +269,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Class 6.1 Highly Toxic Tech',
     applications: ['Acarid Eradication', 'Greenhouse Ornamental Security', 'Fruit Leafminer Defense'],
     packaging: ['25L Steel Pails', '1kg Sealed Jars'],
-    imageUrl: imgAgro,
+    imageUrl: imgAbamectin,
     actionTarget: 'about'
   },
   {
@@ -245,7 +283,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Non-Hazardous Organic Base',
     applications: ['Soil Structure Revitalization', 'Organic Fertilizer Formulations', 'Drought Resistance Upgrading'],
     packaging: ['25kg Poly-woven bags', '800kg Super-sacks'],
-    imageUrl: imgAgro,
+    imageUrl: imgPotassiumHumate,
     actionTarget: 'about'
   },
   {
@@ -259,7 +297,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Eco-certified Soil Conditioner',
     applications: ['Root Drip Irrigation Help', 'Sandy Soil Humus Enrichment', 'Natural Crop Stimulant'],
     packaging: ['25kg Valve Bags', '1000kg Bulk Sacks'],
-    imageUrl: imgAgro,
+    imageUrl: imgHumicAcid,
     actionTarget: 'about'
   },
 
@@ -275,7 +313,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'USP Food Grade',
     applications: ['Infant Fortification', 'Nutritional Supplements', 'Advanced Cosmetic Cosmeceuticals'],
     packaging: ['25kg Sealed Glass Cartons', '5kg Aluminum Flasks'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitA,
     actionTarget: 'contact'
   },
   {
@@ -289,7 +327,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Toxic in Pure Powder',
     applications: ['Clinical Calcium Formulation', 'Nutritional Supplements', 'Dairy Fortification'],
     packaging: ['10kg Sealed Kegs', '1kg Tin Packs'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitD3,
     actionTarget: 'contact'
   },
   {
@@ -303,7 +341,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Food Supplement Grade',
     applications: ['Vegan Supplementation', 'Specialty Plant Milks', 'Clinical Supplements'],
     packaging: ['25kg Food Drums', '2kg Alum Cans'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitD2,
     actionTarget: 'contact'
   },
   {
@@ -317,7 +355,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Safe Organic Compound',
     applications: ['Anti-aging Skin Care', 'Dietary Oils', 'Animal Nutrition Premixes'],
     packaging: ['200kg Metal Barrels', '20kg HDPE Cans'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitE,
     actionTarget: 'contact'
   },
   {
@@ -331,7 +369,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'High-purity active agent',
     applications: ['Pernicious Anemia Therapeutics', 'Energy Drinks', 'Pediatric Formulations'],
     packaging: ['100g Sealed Glass Vials', '1kg Air-tight Jars'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitB12,
     actionTarget: 'contact'
   },
   {
@@ -345,7 +383,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Atoxic Organic Acid',
     applications: ['Natural Preservatives', 'Immunity Boosters', 'Beverage Refining'],
     packaging: ['25kg Triple Cardboard Boxes', '500kg Bulk Bags'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitC,
     actionTarget: 'contact'
   },
   {
@@ -359,7 +397,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Medical Auxiliary Solution',
     applications: ['Hematology Therapeutics', 'Bone Density Enhancements', 'Emergency Coagulation Prep'],
     packaging: ['5L Sealed Dark Jars', '1kg Vacuum Containers'],
-    imageUrl: imgVitamin,
+    imageUrl: imgVitK,
     actionTarget: 'contact'
   },
 
@@ -375,7 +413,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'UL Listed Fire-safe Hardware',
     applications: ['Server Room Security', 'Office Exit Integration', 'Fail-Safe Fire Doors'],
     packaging: ['Single Installer Box', 'Carton of 10 Units'],
-    imageUrl: imgSecurity,
+    imageUrl: imgEMLock,
     actionTarget: 'contact'
   },
   {
@@ -389,7 +427,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'IP67 Waterproof Rating',
     applications: ['Warehouse Garage Alarms', 'Retail Rolling Shutter Alarms', 'Heavy Equipment Security'],
     packaging: ['Sealed Hardware Pack', 'Box containing 50 units'],
-    imageUrl: imgSecurity,
+    imageUrl: imgShutterSensor,
     actionTarget: 'contact'
   },
   {
@@ -403,7 +441,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Industrial Grade Assembly',
     applications: ['Inswinging Glass Entrance Gates', 'Emergency Wooden Doors', 'Structural Frame Conversion'],
     packaging: ['Set of 3 Screws Included', 'Bulk Box of 15 sets'],
-    imageUrl: imgSecurity,
+    imageUrl: imgLZBracket,
     actionTarget: 'contact'
   },
   {
@@ -417,7 +455,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'CE Compliant Automation',
     applications: ['Office Perimeter Alarms', 'Intelligent HVAC shutdown systems', 'Data Server Rack Monitoring'],
     packaging: ['Sealed Multi-kit of 5', 'Bulk Tray of 100'],
-    imageUrl: imgSecurity,
+    imageUrl: imgDoorSensor,
     actionTarget: 'contact'
   },
   {
@@ -431,7 +469,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'CE & RoHS Certified',
     applications: ['Access Control Overrides', 'Office Main Intercom Release', 'Cleanroom Entry Loops'],
     packaging: ['Single unit mounting kit', 'Carton of 40 switches'],
-    imageUrl: imgSecurity,
+    imageUrl: imgExitSwitch,
     actionTarget: 'contact'
   },
   {
@@ -445,7 +483,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'UL tested durability',
     applications: ['Apartment Intercom Entry Locks', 'Keypad Access Door Frames', 'Internal Administrative Security'],
     packaging: ['Metal Plate Kit with installation templates', 'Box of 12 units'],
-    imageUrl: imgSecurity,
+    imageUrl: imgSolenoid,
     actionTarget: 'contact'
   },
 
@@ -461,7 +499,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Organic FDA Compliant',
     applications: ['Premium Fresh Fruit Logistics', 'Organic Puree Processing', 'Gourmet Food Catering'],
     packaging: ['12-Piece Wooden Crates', 'Custom Airfluid Packaging'],
-    imageUrl: imgProduce,
+    imageUrl: imgMangoes,
     actionTarget: 'contact'
   },
   {
@@ -475,7 +513,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Non-GMO Certified',
     applications: ['Import Supermarkets', 'Cold-Pressed Avocado Oil Extraction', 'Premium Health Food chains'],
     packaging: ['4kg Carton Boxes', 'Bulk Ventilated Crates'],
-    imageUrl: imgProduce,
+    imageUrl: imgAvocadoes,
     actionTarget: 'contact'
   },
   {
@@ -489,7 +527,7 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
     safetyClass: 'Certified Pesticide-Free',
     applications: ['Commercial Fresh Food Outlets', 'Dehydration Canning Plants', 'Organic Dining Sector'],
     packaging: ['5kg Protective Carton Baskets', 'Bulk Eco-Mesh Bags'],
-    imageUrl: imgProduce,
+    imageUrl: imgBellPeppers,
     actionTarget: 'contact'
   }
 ];

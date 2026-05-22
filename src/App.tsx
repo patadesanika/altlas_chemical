@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUp, Beaker, ShieldCheck, Mail, Globe, Sparkles } from 'lucide-react';
-import { ActiveSection } from './types';
+import { ActiveSection, ChemicalProduct } from './types';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HomeSection from './components/HomeSection';
@@ -12,7 +12,7 @@ import ContactSection from './components/ContactSection';
 export default function App() {
   const [activeSection, setActiveSection] = useState<ActiveSection>('home');
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [catalogCategory, setCatalogCategory] = useState<'Solvents' | 'Catalysts' | 'Polymers' | 'Reagents' | 'Agro Chemicals' | 'Vitamins' | 'Security Systems' | 'Organic Produce' | 'All'>('All');
+  const [catalogCategory, setCatalogCategory] = useState<ChemicalProduct['category'] | 'All'>('All');
 
   // Monitor Scroll for Active Nav indicators
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function App() {
   };
 
   // Switch catalog and jump to sections
-  const handleLearnMoreCategory = (category: 'Solvents' | 'Catalysts' | 'Polymers' | 'Reagents' | 'All') => {
+  const handleLearnMoreCategory = (category: ChemicalProduct['category'] | 'All') => {
     setCatalogCategory(category);
     handleNavigate('product');
   };
