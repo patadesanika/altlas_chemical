@@ -51,7 +51,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
             <Beaker className="w-5 h-5 text-teal-400 group-hover:rotate-12 transition-transform duration-300" />
           </div>
           <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white font-sans group-hover:text-teal-400 transition-colors">
-            Atlas Chemical
+           ATLAS CHEMICAL
           </h1>
         </div>
 

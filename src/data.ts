@@ -535,12 +535,12 @@ export const CHEMICAL_PRODUCTS: ChemicalProduct[] = [
 export const COMPANY_OFFICES: CompanyOffice[] = [
   {
     id: 'off-01',
-    name: 'Atlas India Trading Node',
+    name: 'ATLAS CHEMICAL Trading Node',
     role: 'Regional Hub',
     city: 'Pune',
     country: 'India',
     phone: '+91 9730092433',
-    email: 'kewal.patade@gmail.com',
+    email: 'kewal.patade0592@gmail.com',
     address: '20, B-2001, VTP Bel Air, Nande Road, Baner, Mahalunge, Pune, Maharashtra 411045',
     coords: { x: 70.2, y: 44.5 },
     contactPerson: 'Kewal Patade'
