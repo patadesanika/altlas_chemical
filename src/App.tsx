@@ -160,7 +160,7 @@ export default function App() {
 
           <div className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 text-[11px] font-mono text-left w-full">
             <div>
-              <span>© {new Date().getFullYear()} Atlas Chemical Enterprise Group N.V. All rights reserved.</span>
+              <span>© {2009} Atlas Chemical Enterprise Group N.V. All rights reserved.</span>
             </div>
             <div className="flex gap-6">
               <a href="#safety" className="hover:text-slate-300">Safety Protocols</a>
