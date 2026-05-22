@@ -152,7 +152,7 @@ export default function App() {
                   className="inline-flex items-center gap-1.5 text-teal-400 hover:text-teal-300 font-semibold"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>contact@atlaschemical.example.com</span>
+                  <span>kewal.patade@gmail.com</span>
                 </button>
               </div>
             </div>
